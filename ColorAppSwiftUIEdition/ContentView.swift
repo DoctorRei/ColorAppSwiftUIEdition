@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var redValue = Double.random(in: 1...255)
+    @State var greenValue = Double.random(in: 1...255)
+    @State var blueValue = Double.random(in: 1...255)
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            ColoredView(redLabelColor: $redValue,
+                        greenLabelColor: $greenValue,
+                        blueLabelColor: $blueValue)
+            
+            VStack {
+                SliderView(value: $redValue, chooseColor: .red)
+                SliderView(value: $greenValue, chooseColor: .green)
+                SliderView(value: $blueValue, chooseColor: .blue)
+                
+                Spacer()
+            }
         }
         .padding()
     }
