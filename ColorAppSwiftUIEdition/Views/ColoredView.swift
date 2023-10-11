@@ -27,6 +27,8 @@ struct ColoredView: View {
 
 struct ColoredLabelView_Previews: PreviewProvider {
     static var previews: some View {
-        ColoredView(redLabelColor: .constant(100.0), greenLabelColor: .constant(25.0), blueLabelColor: .constant(0.0))
+        ColoredView(redLabelColor: .constant(100.0),
+                    greenLabelColor: .constant(25.0),
+                    blueLabelColor: .constant(0.0))
     }
 }

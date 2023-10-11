@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E98E0ABE2AD6974F00458745 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E0ABD2AD6974F00458745 /* TextView.swift */; };
+		E98E0AC22AD6C5FF00458745 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E0AC12AD6C5FF00458745 /* AlertView.swift */; };
 		E9900ECF2AD43BEE00002B45 /* ColorAppSwiftUIEditionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9900ECE2AD43BEE00002B45 /* ColorAppSwiftUIEditionApp.swift */; };
 		E9900ED12AD43BEE00002B45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9900ED02AD43BEE00002B45 /* ContentView.swift */; };
 		E9900ED32AD43BF000002B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9900ED22AD43BF000002B45 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		E98E0ABD2AD6974F00458745 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		E98E0AC12AD6C5FF00458745 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		E9900ECB2AD43BEE00002B45 /* ColorAppSwiftUIEdition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorAppSwiftUIEdition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9900ECE2AD43BEE00002B45 /* ColorAppSwiftUIEditionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAppSwiftUIEditionApp.swift; sourceTree = "<group>"; };
 		E9900ED02AD43BEE00002B45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E98E0AC32AD6CCB100458745 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E98E0AC12AD6C5FF00458745 /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		E9900EC22AD43BEE00002B45 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 				E9900ECE2AD43BEE00002B45 /* ColorAppSwiftUIEditionApp.swift */,
 				E9900ED02AD43BEE00002B45 /* ContentView.swift */,
 				E9900EDC2AD43C1200002B45 /* Views */,
+				E98E0AC32AD6CCB100458745 /* AlertView */,
 				E9900ED22AD43BF000002B45 /* Assets.xcassets */,
 				E9900ED42AD43BF000002B45 /* Preview Content */,
 			);
@@ -159,6 +170,7 @@
 			files = (
 				E9900EE22AD43CC700002B45 /* ColoredView.swift in Sources */,
 				E9900ED12AD43BEE00002B45 /* ContentView.swift in Sources */,
+				E98E0AC22AD6C5FF00458745 /* AlertView.swift in Sources */,
 				E9900ECF2AD43BEE00002B45 /* ColorAppSwiftUIEditionApp.swift in Sources */,
 				E98E0ABE2AD6974F00458745 /* TextView.swift in Sources */,
 				E9900EDE2AD43C4100002B45 /* SliderView.swift in Sources */,

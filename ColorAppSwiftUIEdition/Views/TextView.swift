@@ -12,6 +12,7 @@ struct TextView: View {
     @Binding var red: Double
     @Binding var green: Double
     @Binding var blue: Double
+    @State var showAlert = false
     
     
     var colorHEX: String {
@@ -27,6 +28,11 @@ struct TextView: View {
         Text(colorHEX)
             .onTapGesture() {
                 UIPasteboard.general.string = colorHEX
+                showAlert.toggle()
+            }
+            .animation(Animation.easeInOut(duration: 0.1), value: colorHEX)
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Умница"), message: Text("Скопировано"))
             }
     }
     
