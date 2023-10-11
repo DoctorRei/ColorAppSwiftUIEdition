@@ -22,24 +22,15 @@ struct ContentView: View {
             
             VStack(alignment: .center) {
                 
-                TextField("Red", text: Binding<String>(
-                    get: { String(format: "%.0f", redValue) },
-                    set: { if let value = Double($0) { redValue = value } }
-                ))
+                TextFieldView(rgbText: $redValue, rgbColor: .red)
                 
                 SliderView(value: $redValue, chooseColor: .red)
                 
-                TextField("Green", text: Binding<String>(
-                    get: { String(format: "%.0f", greenValue) },
-                    set: { if let value = Double($0) { greenValue = value } }
-                ))
+                TextFieldView(rgbText: $greenValue, rgbColor: .green)
                 
                 SliderView(value: $greenValue, chooseColor: .green)
                 
-                TextField("Blue", text: Binding<String>(
-                    get: { String(format: "%.0f", blueValue) },
-                    set: { if let value = Double($0) { blueValue = value } }
-                ))
+                TextFieldView(rgbText: $blueValue, rgbColor: .blue)
                 
                 SliderView(value: $blueValue, chooseColor: .blue)
                 
@@ -47,6 +38,8 @@ struct ContentView: View {
             }
         }
         .padding()
+        
+        
     }
 }
 
