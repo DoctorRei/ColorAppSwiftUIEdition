@@ -17,7 +17,7 @@ struct SliderView: View {
         HStack {
             Text("0").bold()
                 .padding()
-            Slider(value: $value, in: 1...255, step: 1)
+            Slider(value: $value, in: 0...255, step: 1)
                 .tint(chooseColor)
             Text("255").bold()
                 .padding()

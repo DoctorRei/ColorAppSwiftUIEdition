@@ -18,6 +18,7 @@ struct TextFieldView: View {
             set: { if let value = Double($0) { rgbText = value } }
         ))
         .bordered(rgbColor: rgbColor)
+        
     }
 }
 

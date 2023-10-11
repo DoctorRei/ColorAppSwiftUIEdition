@@ -9,19 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var redValue = Double.random(in: 1...255)
-    @State var greenValue = Double.random(in: 1...255)
-    @State var blueValue = Double.random(in: 1...255)
+    @State var redValue = Double.random(in: 0...255)
+    @State var greenValue = Double.random(in: 0...255)
+    @State var blueValue = Double.random(in: 0...255)
     
     
     var body: some View {
                 
         VStack {
             
-            ColoredView(redLabelColor: $redValue,
-                        greenLabelColor: $greenValue,
-                        blueLabelColor: $blueValue)
-            .padding()
+            HStack {
+                TextView(red: $redValue, green: $greenValue, blue: $blueValue)
+                    .font(.largeTitle)
+                .multilineTextAlignment(.center)
+                
+                Image(systemName:"arrow.right.doc.on.clipboard")
+            }
             
             VStack(alignment: .center) {
                 
@@ -36,16 +39,15 @@ struct ContentView: View {
                 TextFieldView(rgbText: $blueValue, rgbColor: .blue)
                 
                 SliderView(value: $blueValue, chooseColor: .blue)
-                
-                               
-                TextView(red: $redValue, green: $greenValue, blue: $blueValue)
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.center)
                     
+                ColoredView(redLabelColor: $redValue,
+                            greenLabelColor: $greenValue,
+                            blueLabelColor: $blueValue)
+                .cornerRadius(15)
+                .padding()
                 
             }
         }
-        .padding()
         
         
         
