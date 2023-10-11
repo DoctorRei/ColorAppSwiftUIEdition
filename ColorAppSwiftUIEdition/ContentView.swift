@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State var redValue = Double.random(in: 1...255)
     @State var greenValue = Double.random(in: 1...255)
     @State var blueValue = Double.random(in: 1...255)
     
+    
     var body: some View {
+                
         VStack {
             
             ColoredView(redLabelColor: $redValue,
@@ -34,10 +37,17 @@ struct ContentView: View {
                 
                 SliderView(value: $blueValue, chooseColor: .blue)
                 
-                Spacer()
+                               
+                TextView(red: $redValue, green: $greenValue, blue: $blueValue)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    
+                
             }
         }
         .padding()
+        
+        
         
         
     }
