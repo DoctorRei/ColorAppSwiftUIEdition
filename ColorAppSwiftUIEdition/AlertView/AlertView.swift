@@ -14,7 +14,9 @@ struct AlertView: ViewModifier {
     
     func body(content: Content) -> some View {
         content.alert(isPresented: $showAlert) {
-            Alert(title: Text(title), message: Text(message), dismissButton: .default(Text("OK")))
+            Alert(title: Text(title),
+                  message: Text(message),
+                  dismissButton: .default(Text("OK")))
         }
     }
 }

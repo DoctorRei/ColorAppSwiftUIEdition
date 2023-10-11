@@ -25,9 +25,12 @@ struct TextFieldView: View {
             }
         ))
         .bordered(rgbColor: rgbColor)
+        
         .alert(isPresented: $showAlert,
                title: "Ой",
                message: "Для ввода доступны числа от 0 до 255")
+        
+        
         
     }
     

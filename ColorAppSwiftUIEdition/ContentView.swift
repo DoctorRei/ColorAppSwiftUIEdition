@@ -15,13 +15,13 @@ struct ContentView: View {
     
     
     var body: some View {
-                
+        
         VStack {
             
             HStack {
                 TextView(red: $redValue, green: $greenValue, blue: $blueValue)
                     .font(.largeTitle)
-                .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center)
                 
                 Image(systemName:"arrow.right.doc.on.clipboard")
             }
@@ -39,7 +39,7 @@ struct ContentView: View {
                 TextFieldView(rgbText: $blueValue, rgbColor: .blue)
                 
                 SliderView(value: $blueValue, chooseColor: .blue)
-                    
+                
                 ColoredView(redLabelColor: $redValue,
                             greenLabelColor: $greenValue,
                             blueLabelColor: $blueValue)
@@ -48,10 +48,7 @@ struct ContentView: View {
                 
             }
         }
-        
-        
-        
-        
+        .keyboardType(.numberPad)
     }
 }
 
