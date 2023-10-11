@@ -18,6 +18,7 @@ struct ContentView: View {
             ColoredView(redLabelColor: $redValue,
                         greenLabelColor: $greenValue,
                         blueLabelColor: $blueValue)
+            .padding()
             
             VStack(alignment: .center) {
                 
